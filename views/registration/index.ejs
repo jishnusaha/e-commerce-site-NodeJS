@@ -1,0 +1,141 @@
+<html>
+	<head>
+		
+		
+		
+		
+</html>
+	
+	
+	
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<title>Registration</title>
+		<%-include("../header"); %>
+		<%-include("../dropdown"); %>
+		
+		<!--
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			window.jQuery || document.write( "<script src='/assets/jquery-3.3.1.js'><\/script>" );
+		</script>
+		<!--
+		<link rel='stylesheet' href='/assets/jquery-ui.css'>
+		
+		<script  src='/assets/jquery-ui.js'></script>
+		-->
+		<script src='/assets/registrationValidation.js'></script>
+		
+		<style>
+			header
+			{
+				background-color:#666;
+				padding: 30px;
+				text-align: center;
+				font-size: 35px;
+				color: white;
+			}
+			tr
+			{
+				width:800;
+			}
+			th
+			{
+				text-align:right;
+				width:200px;
+			}
+			td
+			{
+				padding: 15px;
+				width:250px;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+		<form method="post" action="#">
+			<table style=" margin-top:1%;">	
+				<tr >
+					<th><font color='red'>*</font>Name:</th>
+					<td >
+						<input autofocus id="nametextinput" type="text" name ="name"  style="width:230px;"  /> <!-- onblur="validateName()" onkeyup="validateName()" --> 
+					</td>
+					<td id="namenotice"> </td>
+				</tr>
+				<tr>
+					<th ><font color='red'>*</font>Email:	</th>
+					<td >
+						<input id="emailtextinput" type="text" name ="email" style="width:230px;" />
+						<b title="Ex. somebody@example.com">i</b>
+					</td>
+					<td id="emailnotice"> </td>
+				</tr>
+				<tr>
+					<th><font color='red'>*</font>Password:</th>
+					<td >
+						<input id="passwordtextinput"  type="password" name ="password"  style="width:230px;"  />
+					</td>
+					<td id="passwordnotice"></td>
+				</tr>
+				<tr>
+					<th ><font color='red'>*</font>Confirm Password:</th>
+					<td >
+						<input id="cpasswordtextinput"  type="password" name ="cpassword"  style="width:230px;"  />
+					</td>
+					<td id="cpasswordnotice"> </td>
+				</tr>
+				<!--
+				<tr>
+					<th ><font color='red'>*</font>Contact No:</th>
+					<td  style="text-align:left;">
+						<input type="text" name ="contactno" id ="contactnotextinput" style="width:230px;" />
+						<b title="Ex. 01837777777">i</b>
+					</td>
+					<td id="contactnonotice"> </td>
+				</tr>
+				-->
+				<tr>
+					<th><font color='red'>*</font>Type:</th>
+					<td>
+						<select name="type">
+							<option value="admin">Admin</option>
+							<option value="customer">Customer</option>
+							<option value="saler">Saler</option>
+						</select> 
+					</td>
+					<td id="contactnonotice"> </td>
+				</tr>
+				<!--
+				<tr>
+					<th >Gender:</th>
+					<td id='genderinput' >
+						<input id='genderinput' type="radio" name="gender" value="male"  />Male
+						<input id='genderinput' type="radio" name="gender" value="female" />Female
+						<input id='genderinput' type="radio" name="gender" value="other" />Other
+					</td>
+					<td id="gendernotice"> </td>
+				</tr>
+				
+				<tr>
+					<th >Date of Birth:</th>
+					<td >
+						<input id='datetextinput' type="text" name="date"  style="width:230px"/>
+						<b title="Ex. mm/dd/yyyy">i</b>
+						
+					</td>
+					<td id="datenotice"> </td>
+				</tr>
+				-->
+				<tr>
+					<td colspan="3" style="text-align:center">
+						<input id="submit" type="submit" name ="submit" value = "register "/>
+						<a href='/login'>login</a>
+					</td>
+				</tr>
+			</table>
+		</form>
+		</center>
+	</body>
+</html>

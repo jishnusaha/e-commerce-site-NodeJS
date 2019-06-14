@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="/assets/customermystyle.css">
+		<%-include("../header"); %>
+		<%-include("../dropdown"); %>
+		
+		<style>
+			tr
+			{
+				width:800;
+			}
+			th
+			{
+				text-align:right;
+				width:200px;
+			}
+			td
+			{
+				padding: 5px;
+				width:250px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<br/> <br/><br/><br/>
+		<center>
+		<form action="#" method="post">
+			<table>
+				<tr >
+					<th>Email:</th>
+					<td>
+						<input type="text"  name="email"  style="width: 300px;"  />
+					</td>
+					<td/>
+				</tr>
+				
+				<tr>
+					<th>Password:</th>
+					<td>
+						<input type="password" name="password" style="width: 300px;" />
+					</td>
+					<td id="invalid notice"><font color='red'><%= user.notice %></font></td> 
+					
+				</tr>
+				<tr >
+					<th/>
+					<td align="left">
+						<input type="checkbox" name="remember_me" value="remember_me" />remember me
+						<input type="submit" name="submitlogin" value="Login">
+					</td>	
+				</tr>
+				<tr >
+					<th/>
+					<td align="left">
+						<a href="/registration">new here?</a>
+					</td>
+				</tr>
+			</table>
+			
+		</form>
+	</center>
+	
+	</body>
+		
+		
+		
+</html>
+	
+	
+	

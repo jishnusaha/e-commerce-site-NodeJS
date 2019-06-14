@@ -1,0 +1,42 @@
+<html>
+	<head>
+		
+	
+	</head>
+	<body>
+		
+		<center>
+		<form action="#" method="post">
+			<table>
+				<tr >
+					<th>Email:</th>
+					<td>
+						<input type="text"  name="email"  style="width: 200px;"  />
+					</td>
+					<td/>
+				</tr>
+				
+				<tr>
+					<th>Password:</th>
+					<td>
+						<input type="password" name="password" style="width: 200px;" />
+					</td>
+					<td id="invalid notice"><font color='red'><%= user.notice %></font></td> 
+					
+				</tr>
+				<tr >
+					<th/>
+					<td align="left">
+						<input type="checkbox" name="remember_me" value="" />remember me
+						<input type="submit" name="submitlogin" value="Login">
+					</td>	
+				</tr>
+				
+			</table>
+			
+		</form>
+	</center>
+	
+	</body>
+	
+</html>

@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>eshopping</title>
+		
+		<%-include("../header"); %>
+		<%-include("../dropdown"); %>
+		
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			window.jQuery || document.write( "<script src='/assets/jquery-3.3.1.js'><\/script>" );
+		</script>
+		<script src="/assets/jqueryRating.js"></script>
+		<script src="/assets/reviewproduct.js"></script>
+		
+		<style>
+			tr
+			{
+				width:800;
+			}
+			th
+			{
+				text-align:right;
+				width:200px;
+			}
+			td
+			{
+				padding: 5px;
+				width:250px;
+			}		
+		</style>
+	
+	</head>
+	<body>
+		
+		
+	
+		<br/><br/><br/><br/>
+		<center>
+			
+			<table >
+				<tr>
+					<th><font color='red'>*</font>rating:</th>
+					<td>
+						<div id="jRate" style="height:25px;width: 200px;text-align: left"></div>
+					</td>
+					<td id="ratingnotice"></td>
+				</tr>
+				<tr>
+					<th><font color='red'>*</font>Review:</th>
+					<td>
+						<textarea id="review"  style="resize:none; width:250px; height:100px;" " ></textarea>
+					</td>
+					<td id="reviewnotice"></td>
+				</tr>
+				<tr>
+					<th/>
+					<td align="left">
+						<input id="save" type="button" value="save"  >
+						<a href=<%= "/customer/showproduct/"+user.product_id %> >Back</a>
+					</td>	
+					<td>
+			</td>
+				</tr>
+			</table>
+			<p id='pid' style="display: none"><%=user.product_id%></p>
+		
+		</center>
+	</body>
+		
+</html>
+	
+	
+	

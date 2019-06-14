@@ -1,0 +1,103 @@
+<html>
+	<head>
+		<%-include("../header"); %>
+		<%-include("../dropdown"); %>
+		
+		<style>
+			tr
+			{
+				width:1200px;
+			}
+			th
+			{	
+				width:200px;
+			}
+			td
+			{
+				padding: 5px;
+				width:1000px;
+			}
+			
+		</style>
+		
+		<link rel="stylesheet" href="/assets/spinner/dpNumberPicker-2.x.css">
+		<link rel="stylesheet" href="/assets/spinner/dpNumberPicker-2.x-skin.grey.css">
+		<script src="/assets/spinner/dpNumberPicker-2.x.js"></script>
+		
+		
+		<link rel="stylesheet" href="/assets/dialoguebox/jquery.dialogbox.css">
+		<script src="/assets/dialoguebox/jquery.dialogBox.js"></script>
+	
+
+	
+		<script src='/assets/showproduct.js'></script>
+	</head>
+	
+	<body style="height:3000px;">
+		<hr style="margin-top:100px;"/> 
+		
+		<div class="showproduct">
+			<div class="picture">
+				<img src='<%= "/uploads/"+user.product_id+".jpg" %>' alt='<%= "/uploads/"+user.product_id+".jpg" %>' height="42" width="42"> 
+			</div>
+			<div class="info" >
+				<div class="name">
+					<h1 id='productName'></h1>
+					<hr/>
+				</div>
+				<div style="height:300px";>
+					<h3>raging:
+						<div id='rating' style="color:#ffc700; ">
+
+							 
+						</div>					
+<%
+					if(user.customerlogin=="valid")
+					{
+%>					
+						<span> <a href=<%= "/customer/reviewproduct/"+user.product_id %>  >(write review)</a></span>						
+<%
+					}
+%>
+						
+					</h3>
+					<hr/>
+					<h3>Feature:</h3>
+					<div id='feature'>
+					</div>
+				</div>
+				<hr/>
+				<div style="width:500px; height:100px; border:0px solid black;";>
+					<div id='price' style="float:left; height:inherit; width:200px;border:0px solid blue; ">
+						
+					</div>
+<%
+					if(user.customerlogin=="valid")
+					{
+%>	
+					<div style="float:right; height:inherit; width:200px;border:0px solid blue; ">
+						<h3>Quantity:</h3>
+						<div id="np"></div>
+						<div>
+						<br/>
+							<input style="float:left" type="button" value="add to cart" class="button" id='addtocart' >
+						</div>
+						<div id='dialogue'></div>
+					</div>
+<%
+					}
+%>
+
+				</div>
+			</div>
+		</div>
+		<h1 align="center" style="border:1px solid black;">review</h1>
+		<div  id='review' align="center">
+		
+				
+		</div>
+		
+		
+		<p id='pid' style='display:none'> <%=user.product_id%> </p>
+	</body>
+</html>

@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="/assets/customermystyle.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			window.jQuery || document.write( "<script src='/assets/jquery-3.3.1.js'><\/script>" );
+		</script>
+		<script src='/assets/search_suggestion.js'></script>
+	</head>
+	<body>
+		<div>
+		<ul>
+			<li style="margin-left : 10%;">
+				<a href="/customer">E-Shopping</a>
+			</li>
+			<li>
+				<form method="get" action="/customer/search">
+				<li >
+					<input id="search_textbox" name="search_textbox" type="text" style="width:500px; height: 48px;"  value= "<%= user.search_textbox %>" >
+					<div  id="search_suggestion"  class="dropdown-content2">
+					</div>
+				</li>
+				<li>
+					<input type="submit" value="Search" name="searchsubmit" style="width:60px; height: 48px;" >
+				</li>
+				</form>
+			</li>
+<%
+			if(user.customerlogin=="valid") 
+			{
+%>
+				<li style="margin-left: 2%;" class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">My Account</a>
+				<div class="dropdown-content">
+				  <a href="/customer/showordered">My Order</a>
+				  <a href="/customer/changepassword">Change Password</a>
+				  
+				  <a href="/logout">Logout</a>
+				</div>
+				</li>
+<%
+			}
+			else
+			{
+%>
+				<li style="margin-left: 2%;">
+					<a href="/login" style="cursor: pointer;" > Login </a>
+				</li >
+<%
+			}
+
+%>
+				
+			<li  style="margin-left: 2%;">
+				<a href=""> Need Help </a>
+			</li >
+			<li style="margin-left: 2%;">
+				<a href="/customer/showcart"> Cart </a>
+			</li>
+		</ul>
+		</div>
+		
+		<p style='display: none;' id='customerlogin'><%=user.customerlogin%></p>
+	
+	</body>
+		
+	<script>
+		function mousehover(x)
+		{
+			//window.alert(x.innerHTML);
+			document.getElementById("search_textbox").value=x.innerHTML;
+			
+			
+		}
+	</script>
+		
+</html>
+	
+	
+	

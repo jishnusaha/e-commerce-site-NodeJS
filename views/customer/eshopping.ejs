@@ -1,0 +1,74 @@
+<html>
+	<head>
+		
+		<%-include("../header"); %>
+		<%-include("../dropdown"); %>
+		<style>
+			.area{
+				width:1000px;
+				margin-left:250px;
+			}
+			.productSearch{
+				border:5px solid black;
+				height:400px;
+				width:300px;
+				margin:10px;
+				float:left;
+			}
+			.buttonshowsearch
+			{
+				background-color: #4CAF50; /* Green */
+				border: none;
+				color: white;
+				padding: 10px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				margin: 4px 2px;
+				cursor: pointer;
+			}
+			div>img
+			{
+				width:100%;
+				height:100%;
+			}
+			.pictureSearch
+			{
+				border:1px solid black;
+				height:200px;
+				width:300px;
+				cursor: pointer;
+			}
+			.description
+			{
+				border:1px solid black;
+				height:200px;
+				width:300px;
+				text-align:center;
+			}
+		</style>
+		
+		<link rel="stylesheet" href="/assets/spinner/dpNumberPicker-2.x.css">
+		<link rel="stylesheet" href="/assets/spinner/dpNumberPicker-2.x-skin.grey.css">
+		<script src="/assets/spinner/dpNumberPicker-2.x.js"></script>
+		
+		
+		<link rel="stylesheet" href="/assets/dialoguebox/jquery.dialogbox.css">
+		<script src="/assets/dialoguebox/jquery.dialogBox.js"></script>
+		
+		
+		<script src="/assets/homepage.js"></script>
+		
+		
+
+	</head>
+	<body>
+		<br/><br/><br/>
+		<h1 align="center" style="border:1px solid black;">Best Deals</h1>
+		
+		<div  id='area' class="area">
+				
+		</div>
+		<div id='dialogue'></div>
+	</body>
+</html>
