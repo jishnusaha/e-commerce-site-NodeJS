@@ -1,0 +1,70 @@
+
+<%-include("header"); %>
+<br/><br/><br/>
+<body style='background-color:powderblue;'>
+
+	<form method="post" action="#">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<table align="center">
+				<tr>
+					<td><b>Cart Id</td>
+					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= product.id %></td>
+					<input type="hidden" name="id" value="<%= product.id  %>">
+				</tr>	
+				<tr>
+					<td><b>Product Id</td>
+					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= product.productid %></td>
+					<input type="hidden" name="productid" value="<%= product.productid  %>">
+				</tr>	
+				<tr>
+					<td><b>Customer Id</td>
+					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= product.customerid %></td>
+					<input type="hidden" name="customerid" value="<%= product.customerid  %>">
+				</tr>
+				<tr >
+					<td><b>Name</td>
+					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= product.name %></td>
+					<input type="hidden" name ="name" value ="<%= product.name %>" >
+					</tr>
+				<tr>
+					<td><b>Specification</td>
+					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= product.specification %></td>
+					<input type="hidden" name ="specification" value="<%= product.specification %>">
+				</tr>
+				<tr>
+					<td><b>Available Quantity</td>
+					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= product.product_quantity %></td>
+					<input  type="hidden" name ="availablequantity" value="<%= product.product_quantity %>">
+				</tr>
+				<tr>
+					<td><b>Request Quantity</td>
+					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= product.quantity %></td>
+					<input  type="hidden" name ="requestquantity" value="<%= product.quantity %>" >
+				</tr>
+				<tr>
+					<td><b>Catagory</td>
+					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= product.catagory %></td>
+					<input  type="hidden" name ="catagory" value="<%= product.catagory %>" >
+				</tr>
+				<tr>
+					<td><b>Price</td>
+					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= product.unit_price %></td>
+					<input  type="hidden" name ="price" value="<%= product.unit_price %>" >
+				</tr>
+				<tr>
+
+			<td><br/><br/><br/><input type="submit" name="submit" value="Are you sure to accept?" /></td>
+			<td></td>
+		</tr>
+						
+			
+			
+			
+		</table>
+		</form>
+	</body>
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<%-include("footer"); %>
+
+  
+
+ 

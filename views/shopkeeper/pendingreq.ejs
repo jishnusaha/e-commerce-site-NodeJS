@@ -1,0 +1,56 @@
+
+<%-include("header"); %>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body style='background-color:powderblue;'>
+	
+
+	<br/><br/><br/><br/><br/><br/>
+	
+	<table border="30" align="center">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tr>
+			<th>Cart Id</th>
+			<th>Product Id</th>
+
+			<th>Customer Id</th>
+
+			<th> Name</th>
+			<th>Specification</th>
+			<th>Available Quantity </th>
+			<th>Request Quantity </th>
+			<th>Catagory </th>
+			<th>New Price</th>
+			<th>Action</th>
+		</tr>
+		
+		<% for(var i = 0; i < product.length; i++){ %>
+		<% product[i].newprice=product[i].price-((product[i].price*product[i].discount)/100) %>
+		<tr>
+			<td><%= product[i].id %></td>
+			<td><%= product[i].productid %></td>
+			<td><%= product[i].customerid %></td>
+			<td><%= product[i].name %></td>
+			<td><%= product[i].specification %></td>
+			<td><%= product[i].product_quantity %></td>
+			<td><%= product[i].quantity %></td>
+			<td><%= product[i].catagory %></td>
+			<td><%= product[i].unit_price %></td>
+
+
+			
+			
+			<td><a href="/shopkeeper/acceptproduct/<%= product[i].productid %>">Accept</a></td>
+		</tr>
+		
+		<% } %>
+		
+
+	</table>
+</body>
+</html>
+<br/><br/><br/><br/><br/><br/><br/>
+<%-include("footer"); %>

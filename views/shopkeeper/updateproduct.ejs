@@ -1,0 +1,62 @@
+
+<%-include("header"); %>
+
+<body style='background-color:powderblue;'>
+
+	<form method="post" action="#">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<table align="center">	
+				<br/><br/><br/><br/><br/><br/><br/>
+				<tr>
+					<td><b>Id</td>
+					<td><%= product.pid %></td>
+					<input type="hidden" name="pid" value="<%= product.pid  %>">
+				</tr>
+				<tr >
+					<td><b>Name</td>
+					<td >
+						<input type="text" name ="name" value ="<%= product.name %>" />
+					</td>
+				</tr>
+				<tr>
+					<td><b>Specification</td>
+					<td >
+						<input type="textbox" name ="specification" value="<%= product.specification %>" />
+						
+					</td>
+				</tr>
+				<tr>
+					<td><b>Quantity</td>
+					<td >
+						<input  type="text" name ="quantity" value="<%= product.quantity %>" />
+					</td>
+				</tr>
+				<tr>
+					<td><b>Price</td>
+					<td >
+						<input  type="text" name ="price" value="<%= product.price %>" />
+					</td>
+				</tr>
+				<tr>
+					<td><b>Discount</td>
+					<td >
+						<input  type="text" name ="discount" value="<%= product.discount %>" />
+					</td>
+				</tr>
+				<tr>
+			<td><br/><br/><input type="submit" name="submit" value="Save" /></td>
+			<td></td>
+		</tr>
+						
+			
+			
+			
+		</table>
+		</form>
+	</body>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			
+	<%-include("footer"); %>
+
+  
+
+ 

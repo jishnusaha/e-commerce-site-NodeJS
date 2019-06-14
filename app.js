@@ -7,6 +7,7 @@ var bodyParser			=	require('body-parser');
 var logout				=	require('./controllers/logout');
 var registration		=	require('./controllers/registration');
 var login				=	require('./controllers/login');
+var shopkeeper			=	require('./controllers/shopkeeper');
 
 
 var customer			=	require('./controllers/customer');
@@ -29,6 +30,7 @@ app.use('/login', login);
 app.use('/registration', registration);
 app.use('/logout', logout);
 app.use('/customer', customer);
+app.use('/shopkeeper', shopkeeper);
 
 app.use('/', customer);
 

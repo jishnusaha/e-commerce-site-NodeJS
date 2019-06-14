@@ -1,0 +1,50 @@
+<%-include("header"); %>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body style='background-color:powderblue;'>
+	
+
+<form method="post">
+
+	
+	<br/><br/><br/><br/><table border="30" align="center">
+		<tr>
+			<td>Id</td>
+			<td><%= user.uid %></td>
+			<input type="hidden" name="uid" value="<%= user.uid %>">
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td><input type="text" name="name" value="<%= user.name %>"></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><input type="text" name="email" value="<%= user.email %>"></td>
+		</tr>
+		
+		<tr>
+			<td>password</td>
+			<td><input type="password" name="password" value="<%= user.password %>"></td>
+		</tr>
+		<tr>
+			<td>Contact no</td>
+			<td><input type="text" name="contact_number" value="<%= user.contact_number %>"></td>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td><input type="text" name="address" value="<%= user.address %>"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" name="submit" value="Save" /></td>
+			<td></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
+<br/><br/><br/><br/>
+<%-include("footer"); %>

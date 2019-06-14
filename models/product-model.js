@@ -3,6 +3,100 @@ var db = require('./db');
 
 module.exports={
 	
+	/*-------------------shopkeeper------------------------*/
+	get: function(productId, callback){
+		var sql = "select * from product where pid=?";
+		db.getResult(sql, [productId], function(result){
+			//console.log(result);
+			callback(result[0]);
+		});
+	},
+	getAll: function(callback){
+		var sql = "SELECT * FROM product";
+		db.getResult(sql, [], function(result){
+			callback(result);
+		});
+	},
+	update: function(product, callback){
+		console.log(product);
+
+		var sql = "UPDATE product set name=?,specification=?, quantity=?,price=?,discount=? where pid=?";
+	
+		db.execute(sql, [product.name ,product.specification, product.quantity,product.price,product.discount, product.pid], function(status){
+			callback(status);
+		});
+	},
+	updatequantity: function(product, callback){
+		//console.log(product);
+
+		var sql = "UPDATE product set quantity=? where pid=?";
+	
+		db.execute(sql, [product.remainingquantity, product.productId], function(status){
+			callback(status);
+		});
+	},
+	updatestatus: function(product, callback){
+		console.log(product);
+
+		var sql = "UPDATE cart set status='accept' where customerid=? and productid=? and id=?";
+	
+		db.execute(sql, [product.customerId,product.productId,product.Id], function(status){
+			callback(status);
+		});
+	},
+	Delete: function(productId, callback){
+		var sql = "DELETE FROM product WHERE pid=?";
+	
+		db.execute(sql, [productId], function(status){
+			callback(status);
+		});
+	},
+	getDiscount: function(callback){
+		var sql = "SELECT * FROM product where discount>0";
+		db.getResult(sql, [], function(result){
+			callback(result);
+		});
+	},
+	combine:function (callback) {
+		// body...
+	var sql = "SELECT * FROM cartinfoshopkeeper";
+		db.getResult(sql, [], function(result){
+			callback(result);
+		});
+	},
+	getproduct:function (productId,callback) {
+		//console.log(productid);
+	var sql = "SELECT * FROM cartinfoshopkeeper where productid=?";
+		db.getResult(sql, [productId], function(result){
+
+			callback(result[0]);
+		});
+	},
+	insert: function(product, callback){
+		var sql = "INSERT INTO product values(null,?,?,?,?,?,?,?,?,?,0)";
+		db.execute(sql, [product.names,product.salerid,product.specification, product.gender,product.types,product.quantity,product.catagory,product.price,product.discount], function(success){
+			callback(success);
+		});
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

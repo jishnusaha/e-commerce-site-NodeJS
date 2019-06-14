@@ -1,0 +1,49 @@
+
+<%-include("header"); %>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body style='background-color:powderblue;'>
+	
+
+	
+	
+	<table border="30" align="center">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tr>
+		<th> Name</th>
+			<th>Specification</th>
+			<th>Quantity </th>
+			<th>Catagory </th>
+			<th>Old Price</th>
+			<th>Discount</th>
+			<th>New Price</th>
+			
+			<th>Edit</th>
+		</tr>
+		
+		<% for(var i = 0; i < product.length; i++){ %>
+		<% product[i].newprice=product[i].price-((product[i].price*product[i].discount)/100) %>
+
+		<tr>
+			<td><%= product[i].name %></td>
+			<td><%= product[i].specification %></td>
+			<td><%= product[i].quantity %></td>
+			<td><%= product[i].catagory %></td>
+			<td><%= product[i].price %></td>
+			<td><%= product[i].discount %></td>
+			<td><%= product[i].newprice %></td>
+			
+			
+			<td><a href="/shopkeeper/updateproduct/<%= product[i].pid %>">Update</a> | <a href="/shopkeeper/deleteproduct/<%= product[i].pid %>"> Delete</a> </td>
+		</tr>
+		
+		<% } %>
+		
+
+	</table>
+</body>
+</html>
+<%-include("footer"); %>

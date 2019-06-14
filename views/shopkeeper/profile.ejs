@@ -1,0 +1,47 @@
+<%-include("header"); %>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body style='background-color:powderblue;'>
+	
+
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	
+	<table border="15"align="center">
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Password</th>
+			<th>Type</th>
+			<th>Contact no</th>
+			<th>Gender</th>
+			<th>Address</th>
+			<th>Action</th>
+
+		</tr>
+		
+
+		<tr>
+			<td><%= user.uid %></td>
+			<td><%= user.name %></td>
+			<td><%= user.email %></td>
+			<td><%= user.password %></td>
+			<td><%= user.type %></td>
+			<td><%= user.contact_number %></td>
+			<td><%= user.gender %></td>
+			<td><%= user.address %></td>
+			
+			<td>&nbsp;&nbsp;<a href="/shopkeeper/edit/<%= user .uid %>">Edit</a> </td>
+		</tr>
+		
+		
+
+	</table>
+</body>
+</html>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<%-include("footer"); %>
